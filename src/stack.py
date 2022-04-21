@@ -1,20 +1,23 @@
-# Linked list stack
+"""A linked list implementation of a stack."""
 
-You can easily build a stack from singly-linked lists. Recall that a link can be defined this way:
+from __future__ import annotations
+from dataclasses import dataclass
+from typing import Generic, TypeVar, Optional
 
-```python
+T = TypeVar('T')
+
+
 @dataclass
 class Link(Generic[T]):
+    """A link in a linked list."""
+
     head: T
     tail: List[T]
 
-# A List is either None or a Link[T]
+
 List = Optional[Link[T]]
-```
 
-**Exercise:** Implement a stack by filling in the blanks in the code below (and in `src/stack.py`):
 
-```python
 class Stack(Generic[T]):
     """A stack of elements of (generic) type T."""
 
@@ -37,6 +40,3 @@ class Stack(Generic[T]):
     def is_empty(self) -> bool:
         """Test if the stack is empty."""
         # FIXME: code here
-```
-
-I have not written tests for you, so you have to write those yourself if you want minimal certainty that your implementation is correct.
