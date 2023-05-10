@@ -38,5 +38,3 @@ class Stack(Generic[T]):
         """Test if the stack is empty."""
         # FIXME: code here
 ```
-
-I have not written tests for you, so you have to write those yourself if you want minimal certainty that your implementation is correct.
